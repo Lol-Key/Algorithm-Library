@@ -15,9 +15,7 @@ vector<vector<t>> mtxmul(vector<vector<t>> a,vector<vector<t>> b)
         {
             ans.back().emplace_back(0);
             for(int l=0;l<(int)b.size();l++)
-            {
                 ans.back().back()+=a[i][l]*b[l][j];
-            }
         }
     }
     return ans;
