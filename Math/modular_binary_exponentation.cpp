@@ -7,7 +7,7 @@ using namespace std;
 template<typename t>
 t modexp(t a,t b,t m)
 {
-    a%=m;
+    a=(a%m+m)%m;
     t ans=1;
     while(b)
     {
