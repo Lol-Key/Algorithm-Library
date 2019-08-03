@@ -9,19 +9,11 @@ vector<vector<t>> modmtxmul(vector<vector<t>> a,vector<vector<t>> b,t m)
 {
     vector<vector<t>> ans;
     for(int i=0;i<(int)a.size();i++)
-    {
         for(int j=0;j<(int)a[i].size();j++)
-        {
             a[i][j]=(a[i][j]%m+m)%m;
-        }
-    }
     for(int i=0;i<(int)b.size();i++)
-    {
         for(int j=0;j<(int)b[i].size();j++)
-        {
             b[i][j]=(b[i][j]%m+m)%m;
-        }
-    }
     for(int i=0;i<(int)a.size();i++)
     {
         ans.emplace_back(vector<t>());
