@@ -7,7 +7,8 @@ using namespace std;
 template<typename t>
 t modmul(t a,t b,t m)
 {
-    a%=m;
+    a=(a%m+m)%m;
+    b=(b%m+m)%m;
     t ans=0;
     while(b)
     {
