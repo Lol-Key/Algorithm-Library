@@ -21,9 +21,7 @@ vector<vector<t>> modmtxmul(vector<vector<t>> a,vector<vector<t>> b,t m)
         {
             ans.back().emplace_back(0);
             for(int l=0;l<(int)b.size();l++)
-            {
                 ans.back().back()=(ans.back().back()+a[i][l]*b[l][j])%m;
-            }
         }
     }
     return ans;
