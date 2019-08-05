@@ -8,19 +8,19 @@ template<typename t>
 vector<vector<t>> modmtxmul(vector<vector<t>> a,vector<vector<t>> b,t m)
 {
     vector<vector<t>> ans;
-    for(int i=0;i<(int)a.size();i++)
-        for(int j=0;j<(int)a[i].size();j++)
+    for(t i=0;i<(t)a.size();i++)
+        for(t j=0;j<(t)a[i].size();j++)
             a[i][j]=(a[i][j]%m+m)%m;
-    for(int i=0;i<(int)b.size();i++)
-        for(int j=0;j<(int)b[i].size();j++)
+    for(t i=0;i<(t)b.size();i++)
+        for(t j=0;j<(t)b[i].size();j++)
             b[i][j]=(b[i][j]%m+m)%m;
-    for(int i=0;i<(int)a.size();i++)
+    for(t i=0;i<(t)a.size();i++)
     {
         ans.emplace_back(vector<t>());
-        for(int j=0;j<(int)b[0].size();j++)
+        for(t j=0;j<(t)b[0].size();j++)
         {
             ans.back().emplace_back(0);
-            for(int l=0;l<(int)b.size();l++)
+            for(t l=0;l<(t)b.size();l++)
                 ans.back().back()=(ans.back().back()+a[i][l]*b[l][j])%m;
         }
     }
