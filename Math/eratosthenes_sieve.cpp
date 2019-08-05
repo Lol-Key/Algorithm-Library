@@ -11,12 +11,12 @@ vector<t> eratosthenes_sieve(t n)
     ans.reserve(n+1);
     ans[0]=0;
     ans[1]=0;
-    for(int i=3;i<=n;i+=2)
+    for(t i=3;i<=n;i+=2)
         ans[i]=i;
-    for(int i=2;i<=n;i+=2)
+    for(t i=2;i<=n;i+=2)
         ans[i]=2;
-    for(int i=3;i*i<=n;i+=2)
-        for(int j=i;j<=n;j+=i)
+    for(t i=3;i*i<=n;i+=2)
+        for(t j=i;j<=n;j+=i)
             ans[j]=min(ans[j],i);
     return ans;
 }
