@@ -12,6 +12,8 @@ bool fermat_prime(t n,t k)
         return false;
     if(n<=3)
         return true;
+    if(!(n&1))
+        return false;
     mt19937 rng(chrono::high_resolution_clock::now().time_since_epoch().count());
     uniform_int_distribution <t>rng2(2,n-2);
     for(int i=0;i<k;i++)
