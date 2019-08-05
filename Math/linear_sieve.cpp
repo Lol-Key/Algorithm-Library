@@ -11,11 +11,11 @@ vector<t> sieve(t n)
     ans.reserve(n+1);
     ans[0]=0;
     ans[1]=0;
-    for(int i=2;i<=n;i++)
+    for(t i=2;i<=n;i++)
     {
         if(!ans[i])
             ans[i]=i,p.emplace_back(i);
-        for(int j=0;j<p.size();j++)
+        for(t j=0;j<p.size();j++)
         {
             if(i*p[j]>n)
                 break;
