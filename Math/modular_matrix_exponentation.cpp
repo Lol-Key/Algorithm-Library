@@ -1,5 +1,5 @@
 //Raising matrix a = n x n to the b'th mod m power with binary exponentation
-//Time complexity: O(n^3)
+//Time complexity: O(n^3log(n))
 
 #include <bits/stdc++.h>
 #include "modular_matrix_multiplication.cpp"
