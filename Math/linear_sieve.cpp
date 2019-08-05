@@ -9,7 +9,6 @@ vector<t> sieve(t n)
 {
     vector<t> ans,p;
     ans.reserve(n+1);
-    ans[1]=1;
     for(int i=2;i<=n;i++)
     {
         if(!ans[i])
