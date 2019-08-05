@@ -9,10 +9,10 @@ template<typename t>
 vector<vector<t>> mtxexp(vector<vector<t>> a,t b)
 {
     vector<vector<t>> ans;
-    for(int i=0;i<(int)a.size();i++)
+    for(t i=0;i<(int)a.size();i++)
     {
         ans.emplace_back(vector<t>());
-        for(int j=0;j<(int)a.size();j++)
+        for(t j=0;j<(int)a.size();j++)
         {
             if(i==j)
                 ans.back().emplace_back(1);
