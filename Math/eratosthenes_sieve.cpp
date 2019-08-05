@@ -9,6 +9,8 @@ vector<t> eratosthenes_sieve(t n)
 {
     vector<t> ans;
     ans.reserve(n+1);
+    ans[0]=0;
+    ans[1]=0;
     for(int i=3;i<=n;i+=2)
         ans[i]=i;
     for(int i=2;i<=n;i+=2)
