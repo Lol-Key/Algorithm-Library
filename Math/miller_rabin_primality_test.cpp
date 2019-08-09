@@ -3,6 +3,7 @@
 
 #include <bits/stdc++.h>
 #include "modular_binary_exponentation.cpp"
+#include "modular_multiplication.cpp"
 using namespace std;
 
 template<typename t>
@@ -13,7 +14,7 @@ bool composite_miller_rabin(t x,t d,t s,t n)
         return false;
     for(t r=1;r<s;r++)
     {
-        x=(x*x)%n;
+        x=modmul(x,x,n);
         if(x==n-1)
             return false;
     }
