@@ -22,7 +22,7 @@ bool composite_miller_rabin(t x,t d,t s,t n)
 }
 
 template<typename t>
-bool prime(t n,t k)
+bool prime2(t n,t k)
 {
     if(n<=1)
         return false;
